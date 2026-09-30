@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d2b">
+  <meta name="description" content="La historia de Sergio Cobos: sobreviviente del secuestro, ingeniero civil y líder de proyectos de infraestructura. Una invitación a seguir construyendo futuro.">
+  <title>Sergio Cobos — Seguir construyendo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172c2b;
+      --muted: #526561;
+      --paper: #f7f5ef;
+      --white: #fffefa;
+      --green: #174c45;
+      --lime: #d3e6a2;
+      --orange: #c86b43;
+      --line: #d9dfd4;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.65; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { font-weight: 750; letter-spacing: .04em; text-decoration: none; }
+    nav { display: flex; gap: 24px; flex-wrap: wrap; font-size: .92rem; }
+    nav a { text-decoration: none; color: var(--muted); }
+    nav a:hover, nav a:focus-visible { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+    .hero { padding: clamp(64px, 10vw, 120px) 0 84px; background: var(--green); color: var(--white); overflow: hidden; position: relative; }
+    .hero:after { content: ""; position: absolute; width: 430px; height: 430px; border: 1px solid rgba(211,230,162,.24); border-radius: 50%; right: -140px; top: -210px; box-shadow: 0 0 0 52px rgba(211,230,162,.035), 0 0 0 104px rgba(211,230,162,.03); }
+    .hero-inner { display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: center; gap: 48px; position: relative; z-index: 1; }
+    .portrait { width: 100%; border: 5px solid rgba(255,255,255,.88); border-radius: 5px; box-shadow: 0 18px 48px rgba(0,0,0,.24); transform: rotate(1.5deg); }
+    .portrait-caption { margin: 15px 0 0; color: #d6e2d8; font-size: .85rem; text-align: center; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 700; color: var(--lime); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 850px; margin: 18px 0 22px; font: 500 clamp(3rem, 8vw, 6.6rem)/.98 var(--serif); letter-spacing: -.045em; }
+    .hero p { max-width: 650px; color: #e2ece4; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+    .button { display: inline-block; border-radius: 4px; padding: 12px 18px; text-decoration: none; font-weight: 700; }
+    .button-primary { background: var(--lime); color: var(--ink); }
+    .button-quiet { color: var(--white); border: 1px solid rgba(255,255,255,.5); }
+    .section { padding: 84px 0; }
+    .section-heading { max-width: 720px; margin-bottom: 36px; }
+    .kicker { color: var(--orange); text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 800; }
+    h2 { margin: 12px 0 14px; font: 500 clamp(2.2rem, 5vw, 3.7rem)/1.05 var(--serif); letter-spacing: -.025em; }
+    .lead { color: var(--muted); font-size: 1.12rem; }
+    .story-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: start; }
+    .story-copy p { max-width: 690px; }
+    .quote-card { background: var(--lime); padding: 30px; border-radius: 4px; }
+    .quote-card blockquote { margin: 0; font: 500 1.55rem/1.35 var(--serif); }
+    .quote-card p { margin: 18px 0 0; font-size: .9rem; color: #40534a; }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 38px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .stat { padding: 22px 18px 22px 0; }
+    .stat strong { display: block; color: var(--green); font: 500 2rem var(--serif); }
+    .stat span { color: var(--muted); font-size: .9rem; }
+    .achievements { background: var(--white); }
+    .timeline { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .milestone { padding: 26px; border: 1px solid var(--line); background: #fff; border-radius: 4px; }
+    .milestone .year { color: var(--orange); font-size: .82rem; font-weight: 800; letter-spacing: .08em; }
+    .milestone h3 { margin: 8px 0; font: 500 1.55rem var(--serif); }
+    .milestone p { color: var(--muted); margin-bottom: 0; }
+    .professional { background: #e9eee5; }
+    .credentials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .credential { padding: 23px; border-top: 3px solid var(--green); background: rgba(255,255,255,.65); }
+    .credential strong { display: block; margin-bottom: 6px; }
+    .credential span { color: var(--muted); font-size: .94rem; }
+    .youth { background: var(--green); color: var(--white); }
+    .youth .kicker { color: var(--lime); }
+    .youth .lead { color: #e2ece4; }
+    .principles { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .principles span { padding: 8px 13px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; color: #edf2e8; font-size: .9rem; }
+    .contact { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+    .contact-copy { max-width: 650px; }
+    .contact .button-primary { background: var(--green); color: white; white-space: nowrap; }
+    footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    @media (max-width: 760px) {
+      .topbar-inner, .contact { align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px 18px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+      .portrait-wrap { grid-row: 2; width: min(260px, 72vw); }
+      .story-grid, .timeline, .credentials { grid-template-columns: 1fr; }
+      .story-grid { gap: 28px; }
+      .stat-row { grid-template-columns: 1fr; }
+      .stat { border-bottom: 1px solid var(--line); }
+      .stat:last-child { border-bottom: 0; }
+      .section { padding: 64px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#inicio">SERGIO COBOS</a>
+      <nav aria-label="Navegación principal">
+        <a href="#historia">Mi historia</a>
+        <a href="#logros">Lo que construí</a>
+        <a href="#profesion">Mi trayectoria</a>
+        <a href="#jovenes">Para jóvenes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="eyebrow">Una historia de dignidad, trabajo y futuro</div>
+          <h1>El secuestro fue parte de mi historia. No fue el final.</h1>
+          <p>Soy Sergio Cobos: sobreviviente, ingeniero y líder de proyectos. Después de una experiencia que cambió mi vida, seguí aprendiendo, trabajando y construyendo caminos. Hoy quiero compartir ese recorrido con jóvenes que también buscan un nuevo comienzo.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#historia">Conoce mi historia</a>
+            <a class="button button-quiet" href="#jovenes">Un mensaje para jóvenes</a>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <img class="portrait" src="sergio-cobos.png" alt="Retrato de Sergio Cobos, mirando a cámara y sonriendo suavemente">
+          <p class="portrait-caption">Sergio Cobos</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="historia">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="kicker">Mi historia</div>
+          <h2>Volver a elegir el futuro, paso a paso.</h2>
+        </div>
+        <div class="story-grid">
+          <div class="story-copy">
+            <p class="lead">En 2008 fui víctima de secuestro. La experiencia dejó una huella profunda, pero no borró mis capacidades, mis proyectos ni mi derecho a construir una vida propia.</p>
+            <p>Mi camino de regreso no se resume en una frase ni fue igual todos los días. Lo fui construyendo con apoyo, decisiones cotidianas, formación y trabajo. Con el tiempo volví a asumir responsabilidades en proyectos complejos y a trabajar junto a equipos que desarrollan infraestructura para las comunidades.</p>
+            <p>Comparto esta historia con respeto por quienes han vivido hechos similares. No existe una única manera de sanar o avanzar; cada persona merece hacerlo a su ritmo y con el acompañamiento que necesite.</p>
+          </div>
+          <aside class="quote-card">
+            <blockquote>“Lo vivido no tiene que decidir todo lo que todavía podemos llegar a ser.”</blockquote>
+            <p>Una convicción que nace de mi propio recorrido.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section achievements" id="logros">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="kicker">Logros después del secuestro</div>
+          <h2>Seguí construyendo futuro, también en equipo.</h2>
+          <p class="lead">Estos hitos profesionales son parte de mi recorrido posterior a 2008. Detrás de cada proyecto hay muchas personas, comunidades y oficios.</p>
+        </div>
+        <div class="timeline">
+          <article class="milestone">
+            <div class="year">2014–2015 · OIL &amp; GAS</div>
+            <h3>Infraestructura para energía</h3>
+            <p>Dirigí obras civiles y mecánicas para tanques de almacenamiento de 100.000 barriles en los campos Piriri–Rubiales.</p>
+          </article>
+          <article class="milestone">
+            <div class="year">2017–2018 · INFRAESTRUCTURA VIAL</div>
+            <h3>Rumichaca–Pasto</h3>
+            <p>Participé en la supervisión de la doble calzada, en un corredor de 84 km entre Nariño y la frontera sur.</p>
+          </article>
+          <article class="milestone">
+            <div class="year">2018–2021 · OBRA CIVIL</div>
+            <h3>Acueducto y variante vial</h3>
+            <p>Trabajé en la construcción de 21 km de acueducto y 5,2 km de variante vial.</p>
+          </article>
+          <article class="milestone">
+            <div class="year">2021–2023 · CONCESIONES VIALES</div>
+            <h3>Ruta del Sol III</h3>
+            <p>Lideré un tramo de la ampliación a doble calzada como jefe de tramo.</p>
+          </article>
+          <article class="milestone">
+            <div class="year">2023–2026 · RUTA DEL SOL II</div>
+            <h3>129 km de doble calzada</h3>
+            <p>Como jefe de producción, coordiné trabajos de construcción, variantes estratégicas y traslado de servicios afectados.</p>
+          </article>
+          <article class="milestone">
+            <div class="year">FORMACIÓN CONTINUA</div>
+            <h3>Aprender y volver a empezar</h3>
+            <p>Completé estudios de Especialización en Gerencia de Proyectos de Ingeniería; el CV indica que el grado y la certificación estaban pendientes.</p>
+          </article>
+        </div>
+        <div class="stat-row" aria-label="Resumen de trayectoria">
+          <div class="stat"><strong>20+ años</strong><span>de experiencia profesional reportada</span></div>
+          <div class="stat"><strong>Vial · energía · Oil &amp; Gas</strong><span>sectores en los que he trabajado</span></div>
+          <div class="stat"><strong>Trabajo en equipo</strong><span>el centro de cada logro y cada obra</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section professional" id="profesion">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="kicker">Mi trayectoria</div>
+          <h2>Una vida profesional dedicada a construir.</h2>
+          <p class="lead">Mi oficio me ha llevado de la topografía a la dirección de proyectos y a la coordinación de equipos en distintos territorios.</p>
+        </div>
+        <div class="credentials">
+          <div class="credential"><strong>Ingeniero Civil</strong><span>Universidad de La Salle</span></div>
+          <div class="credential"><strong>Tecnólogo en Topografía</strong><span>Unidades Tecnológicas de Santander</span></div>
+          <div class="credential"><strong>Gerencia de Proyectos de Ingeniería</strong><span>Estudios terminados; grado/certificación pendiente según mi CV</span></div>
+        </div>
+        <p style="margin:28px 0 0;color:var(--muted)">He trabajado en infraestructura vial, concesiones, gasoductos y poliductos, obras civiles, energía e hidroeléctricas, en funciones de producción, residencia y dirección de obra.</p>
+      </div>
+    </section>
+
+    <section class="section youth" id="jovenes">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="kicker">Para jóvenes que han sido víctimas</div>
+          <h2>Tu futuro te pertenece.</h2>
+          <p class="lead">Si has vivido violencia, no tienes que demostrar fortaleza todo el tiempo ni recorrer el camino a solas. Pedir apoyo también es una forma de avanzar. Tu historia es más amplia que lo que te ocurrió, y puedes decidir qué hacer con ella, cuándo contarla y a quién.</p>
+          <p class="lead">Yo no tengo una fórmula para todos. Sí puedo decirte que, después de una experiencia que me marcó, volví a estudiar, a trabajar y a liderar proyectos. Ojalá mi recorrido te recuerde que todavía pueden abrirse caminos.</p>
+        </div>
+        <div class="principles" aria-label="Principios de la iniciativa">
+          <span>Dignidad</span><span>Escucha</span><span>Oportunidades</span><span>Memoria con respeto</span><span>Esperanza sin estigmas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="wrap contact">
+        <div class="contact-copy">
+          <div class="kicker">Conectemos</div>
+          <h2>Sigamos construyendo oportunidades.</h2>
+          <p class="lead">Estoy abierto a conversar con jóvenes, organizaciones, universidades, empresas y aliados que trabajen por la memoria, la dignidad y las oportunidades para las víctimas.</p>
+        </div>
+        <a class="button button-primary" href="https://www.linkedin.com/in/sergio-cobos-b2394446" target="_blank" rel="noopener noreferrer">Contactarme en LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Sergio Cobos · Una historia personal compartida con dignidad y respeto.</div>
+  </footer>
+</body>
+</html>
